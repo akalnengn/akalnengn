@@ -1,7 +1,8 @@
 """Fetch profile numbers from the GitHub GraphQL API into data/stats.json.
 
 Runs in GitHub Actions. With a personal access token (secret GH_STATS_TOKEN)
-the telemetry card also counts private and organization repositories; without
+the telemetry card also counts private repositories and the repositories of
+organizations the account belongs to; without
 it, the workflow's own token is used and only public data is counted.
 
 The language card only ever uses public repositories owned by the account,
@@ -35,8 +36,16 @@ query($login: String!, $cursor: String) {
       totalCommitContributions
       contributionCalendar { totalContributions }
     }
-    repositories(first: 100, after: $cursor, isFork: false,
-                 ownerAffiliations: [OWNER, ORGANIZATION_MEMBER]) {
+    organizations(first: 20) {
+      nodes {
+        login
+        repositories(first: 100, isFork: false) {
+          totalCount
+          nodes { stargazerCount }
+        }
+      }
+    }
+    repositories(first: 100, after: $cursor, isFork: false, ownerAffiliations: [OWNER]) {
       totalCount
       pageInfo { hasNextPage endCursor }
       nodes {
@@ -90,12 +99,16 @@ def main():
             if name not in EXCLUDE_LANGS:
                 langs[name] += edge["size"]
 
+    orgs = viewer["organizations"]["nodes"]
+    org_repo_count = sum(o["repositories"]["totalCount"] for o in orgs)
+    org_stars = sum(r["stargazerCount"] for o in orgs for r in o["repositories"]["nodes"])
+
     contrib = viewer["contributionsCollection"]
     data = {
-        "stars": sum(r["stargazerCount"] for r in repos),
+        "stars": sum(r["stargazerCount"] for r in repos) + org_stars,
         "contributions": contrib["contributionCalendar"]["totalContributions"],
         "commits": contrib["totalCommitContributions"],
-        "repositories": viewer["repositories"]["totalCount"],
+        "repositories": viewer["repositories"]["totalCount"] + org_repo_count,
         "followers": viewer["followers"]["totalCount"],
         "languages": langs.most_common(5),
     }

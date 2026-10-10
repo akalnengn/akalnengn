@@ -1,0 +1,35 @@
+name: Refresh profile cards
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/stats.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch numbers
+        env:
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN || github.token }}
+        run: python scripts/fetch_stats.py
+      - name: Render cards
+        run: python scripts/render.py all
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/stats.json assets/
+          git diff --cached --quiet || git commit -m "Refresh profile cards"
+          git push

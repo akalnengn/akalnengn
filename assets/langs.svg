@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Most used languages">
+<title>Most used languages</title>
+<style>
+  .tw { animation-name: tw; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+  @keyframes tw { 0%,100% { opacity: .12 } 50% { opacity: 1 } }
+  .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+  .sans { font-family: "Segoe UI", -apple-system, Helvetica, Arial, sans-serif; }
+  
+</style>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#060914"/><stop offset="1" stop-color="#0e1530"/>
+  </linearGradient>
+  <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="frame"><rect width="495" height="195" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="495" height="195" fill="url(#sky)"/>
+<circle cx="307.4" cy="142.7" r="1.4" fill="#fff" opacity="0.27" class="tw" style="animation-duration:4.1s;animation-delay:4.7s"/><circle cx="320.1" cy="172.5" r="0.5" fill="#fff" opacity="0.49"/><circle cx="426.9" cy="75.2" r="0.5" fill="#fff" opacity="0.62"/><circle cx="10.4" cy="44.5" r="0.9" fill="#fff" opacity="0.37"/><circle cx="426.5" cy="76.8" r="0.5" fill="#fff" opacity="0.34"/><circle cx="304.7" cy="27.7" r="0.5" fill="#fff" opacity="0.88" class="tw" style="animation-duration:2.5s;animation-delay:3.9s"/><circle cx="471.6" cy="35.0" r="0.7" fill="#fff" opacity="0.44"/><circle cx="472.2" cy="104.8" r="0.7" fill="#fff" opacity="0.37"/><circle cx="475.7" cy="40.8" r="1.1" fill="#fff" opacity="0.44"/><circle cx="179.9" cy="35.0" r="0.7" fill="#fff" opacity="0.42"/><circle cx="165.6" cy="156.9" r="1.4" fill="#fff" opacity="0.25" class="tw" style="animation-duration:4.9s;animation-delay:1.7s"/><circle cx="154.9" cy="157.1" r="1.1" fill="#fff" opacity="0.70"/><circle cx="94.0" cy="92.4" r="0.7" fill="#fff" opacity="0.29"/><circle cx="478.9" cy="8.3" r="0.9" fill="#fff" opacity="0.80"/><circle cx="12.8" cy="151.3" r="0.9" fill="#fff" opacity="0.49"/><circle cx="413.7" cy="88.7" r="0.7" fill="#fff" opacity="0.66" class="tw" style="animation-duration:5.8s;animation-delay:0.6s"/><circle cx="123.8" cy="157.2" r="1.1" fill="#fff" opacity="0.47"/><circle cx="176.8" cy="102.1" r="1.1" fill="#fff" opacity="0.32"/><circle cx="368.5" cy="153.1" r="0.9" fill="#fff" opacity="0.27"/><circle cx="464.6" cy="21.1" r="0.9" fill="#fff" opacity="0.58"/><circle cx="180.6" cy="31.7" r="0.9" fill="#fff" opacity="0.85" class="tw" style="animation-duration:4.4s;animation-delay:1.6s"/><circle cx="158.3" cy="37.2" r="0.5" fill="#fff" opacity="0.66"/><circle cx="355.2" cy="61.8" r="1.1" fill="#fff" opacity="0.35"/><circle cx="27.6" cy="188.5" r="1.4" fill="#fff" opacity="0.85"/><circle cx="19.5" cy="142.5" r="0.9" fill="#fff" opacity="0.79"/><circle cx="225.9" cy="82.9" r="0.5" fill="#fff" opacity="0.89" class="tw" style="animation-duration:4.7s;animation-delay:4.0s"/><circle cx="166.7" cy="42.7" r="1.4" fill="#fff" opacity="0.87"/><circle cx="311.0" cy="151.4" r="0.5" fill="#fff" opacity="0.36"/><circle cx="185.6" cy="15.0" r="1.1" fill="#fff" opacity="0.44"/><circle cx="224.7" cy="190.9" r="0.7" fill="#fff" opacity="0.88"/><circle cx="224.9" cy="95.3" r="0.9" fill="#fff" opacity="0.56" class="tw" style="animation-duration:3.5s;animation-delay:2.0s"/><circle cx="75.3" cy="74.5" r="1.4" fill="#fff" opacity="0.87"/><circle cx="309.3" cy="97.4" r="0.9" fill="#fff" opacity="0.37"/><circle cx="243.5" cy="100.3" r="1.4" fill="#fff" opacity="0.81"/><circle cx="180.0" cy="151.0" r="0.9" fill="#fff" opacity="0.70"/><circle cx="327.4" cy="146.1" r="0.9" fill="#fff" opacity="0.61" class="tw" style="animation-duration:4.8s;animation-delay:4.2s"/><circle cx="133.0" cy="187.4" r="0.9" fill="#fff" opacity="0.87"/><circle cx="169.6" cy="37.4" r="0.5" fill="#fff" opacity="0.56"/><circle cx="380.8" cy="64.9" r="0.9" fill="#fff" opacity="0.55"/><circle cx="401.7" cy="125.1" r="0.9" fill="#fff" opacity="0.48"/><text x="26" y="36" class="mono" font-size="12" letter-spacing="2.5" fill="#7aa2ff">MOST USED LANGUAGES</text><text x="247.5" y="104" text-anchor="middle" class="sans" font-size="14" fill="#8b98b8">Charted from public missions.</text><text x="247.5" y="128" text-anchor="middle" class="mono" font-size="13" fill="#ffb86b">first launch in preparation</text></g>
+<rect x=".5" y=".5" width="494" height="194" rx="14" fill="none" stroke="#1f2a4d"/>
+</svg>

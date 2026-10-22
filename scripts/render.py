@@ -104,7 +104,7 @@ def banner():
     svg += "".join(meteors)
     svg += (
         f'<text x="{w - 34}" y="{h - 26}" text-anchor="end" class="mono" font-size="13" '
-        f'letter-spacing="2" fill="{MUTED}">backend · automation · rpa → ai agents</text>'
+        f'letter-spacing="2" fill="{MUTED}">backend · ai automation · fintech</text>'
     )
     svg += frame_close(w, h)
     (ASSETS / "banner.svg").write_text(svg)

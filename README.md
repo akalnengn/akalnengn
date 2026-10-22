@@ -8,13 +8,13 @@
 callsign ......... Engin Akalın
 base ............. İstanbul, Türkiye
 orbit ............ backend + automation for financial operations
-stack ............ .NET · C# · SQL · RPA
-current burn ..... rebuilding deterministic automation as LLM agents
+stack ............ .NET · C# · SQL
+current burn ..... building LLM agents for financial operations
 ~~~
 
 ### 🔭 Thesis
 
-> Deterministic bots break the moment an exception shows up. LLM agents handle the exception but give up predictability. Automation that survives production draws the line between the two.
+> Rule-based automation breaks the moment an exception shows up. LLM agents handle the exception but give up predictability. Automation that survives production draws the line between the two.
 
 ### 🧰 Toolkit
 
